@@ -7,17 +7,17 @@
 * Created
 */
 
-Template.header.onCreated(function(){
+Template.header.created = function(){
   // Code to run when template is created goes here.
-});
+}
 
 /*
 * Rendered
 */
 
-Template.header.onRendered(function() {
+Template.header.rendered = function() {
   // Code to run when template is rendered goes here.
-});
+}
 
 /*
 * Helpers
@@ -37,9 +37,7 @@ Template.header.events({
   'click .logout': function(){
     Meteor.logout(function(error){
       if(error){
-        Bert.alert(error.reason, 'danger');
-      } else {
-        Bert.alert('Succesfully logged out!', 'success');
+        alert(error.reason);
       }
     });
   }

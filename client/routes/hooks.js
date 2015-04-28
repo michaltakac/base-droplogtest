@@ -1,10 +1,10 @@
 /*
 * Route Hooks
-* Hook functions for managing user access to routes.
+* Hooks for managing user access to application routes.
 */
 
 /*
-* Define Hook Functions
+* Define Hooks
 */
 
 /*
@@ -41,6 +41,7 @@ userAuthenticated = function(){
 
 Router.onBeforeAction(checkUserLoggedIn, {
   except: [
+    'index',
     'signup',
     'login',
     'recover-password',
@@ -50,6 +51,7 @@ Router.onBeforeAction(checkUserLoggedIn, {
 
 Router.onBeforeAction(userAuthenticated, {
   only: [
+    'index',
     'signup',
     'login',
     'recover-password',

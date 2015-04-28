@@ -9,6 +9,7 @@ accounts-password
 accounts-base
 jquery
 check
+http
 audit-argument-checks
 iron:router
 themeteorchef:jquery-validation
@@ -21,3 +22,11 @@ npm-container
 themeteorchef:bert
 meteorhacks:ssr
 fourseven:scss
+numeral:numeral
+particle4dev:cheerio
+momentjs:moment
+natestrauser:jquery-scrollto
+
+#BEST DEVELOPMENT TOOL \O/
+msavin:mongol
+meteorhacks:kadira

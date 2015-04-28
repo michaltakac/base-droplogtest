@@ -15,21 +15,19 @@ Template.login.onCreated(function(){
 * Rendered
 */
 
-Template.login.onRendered(function(){
+Template.login.rendered = function(){
   $('#application-login').validate({
     rules: {
-      emailAddress: {
-        required: true,
-        email: true
+      username: {
+        required: true
       },
       password: {
         required: true
       }
     },
     messages: {
-      emailAddress: {
-        required: "Please enter your email address to login.",
-        email: "Please enter a valid email address."
+      username: {
+        required: "Please enter your Runelytics username to login."
       },
       password: {
         required: "Please enter your password to login."
@@ -38,21 +36,22 @@ Template.login.onRendered(function(){
     submitHandler: function(){
       // Grab the user's details.
       user = {
-        email: $('[name="emailAddress"]').val(),
+        userName: $('[name="username"]').val(),
         password: $('[name="password"]').val()
       }
 
       // Log the user in.
-      Meteor.loginWithPassword(user.email, user.password, function(error){
+      Meteor.loginWithPassword(user.userName, user.password, function(error){
         if(error){
           Bert.alert(error.reason, 'danger');
         } else {
+          Router.go('/lists');
           Bert.alert('Logged in!', 'success');
         }
       });
     }
   });
-});
+}
 
 /*
 * Helpers

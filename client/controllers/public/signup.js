@@ -18,9 +18,9 @@ Template.signup.onCreated(function(){
 Template.signup.onRendered(function(){
   $('#application-signup').validate({
     rules: {
-      emailAddress: {
+      username: {
         required: true,
-        email: true
+        maxlength: 20
       },
       password: {
         required: true,
@@ -28,27 +28,31 @@ Template.signup.onRendered(function(){
       }
     },
     messages: {
-      emailAddress: {
-        required: "Please enter your email address to sign up.",
-        email: "Please enter a valid email address."
+      username: {
+        required: "Please enter your Runelytics username.",
+        maxlength: "Maximum length is 20 characters."
       },
       password: {
         required: "Please enter a password to sign up.",
-        minlength: "Please use at least six characters."
+        minlength: "Please use at least 6 characters."
       }
     },
     submitHandler: function(){
-      // Grab the user's details.
-      user = {
-        email: $('[name="emailAddress"]').val(),
+      // Grab the customer's details.
+      var customer = {
+        userName: $('[name="username"]').val(),
         password: $('[name="password"]').val()
       }
 
       // Create the user's account.
-      Accounts.createUser({email: user.email, password: user.password}, function(error){
+      Accounts.createUser({
+        username: customer.userName,
+        password: customer.password
+      }, function(error){
         if(error){
           Bert.alert(error.reason, 'danger');
         } else {
+          Router.go('/lists');
           Bert.alert('Welcome!', 'success');
         }
       });
