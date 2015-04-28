@@ -40,25 +40,13 @@ TormentedDemonDropsRS3 = [
 		"npc": "Tormented Demon"
 	},
 	{
-		"title": "Dragon claw",
+		"title": "Dragon claws",
 		"quantity": 1,
-		"price": 123731,
+		"price": 235000,
 		"rarity": "rare",
 		"droprate": null,
-		"type": "weapons",
-		"img": "/img/rs3/dragon_claw.png",
-		"game": "rs3",
-		"boss": "Tormented Demon",
-		"npc": "Tormented Demon"
-	},
-	{
-		"title": "Off-hand dragon claw",
-		"quantity": 1,
-		"price": 112458,
-		"rarity": "rare",
-		"droprate": null,
-		"type": "weapons",
-		"img": "/img/rs3/off-hand_dragon_claw.png",
+		"type": "Weapons",
+		"img": "/img/rs3/dragon_claws.png",
 		"game": "rs3",
 		"boss": "Tormented Demon",
 		"npc": "Tormented Demon"
