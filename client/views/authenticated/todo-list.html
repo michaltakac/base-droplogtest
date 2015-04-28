@@ -1,0 +1,81 @@
+<template name="todoList">
+  <div class="page-header clearfix">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+        <div class="form-group">
+          <h3>{{name}}</h3>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <a href="#" class="btn btn-danger btn-block pull-right delete-droplog">Delete droplog</a>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="summarize">
+      <div class="trip-info">
+        <div class="current-time">Current time: {{currentTime}}</div>
+      </div>
+      <p>Total drops: {{dropCount}}</p>
+      <p>Total price: {{totalGp}}gp</p>
+    </div>
+    <div class="drops-list">
+      <table id="rsdl-table">
+        <thead class="rsdl-table-header">
+          <tr>
+            <th class="th-table-number">#</th>
+            <th class="th-table-image">Img</th>
+            <th class="th-table-title">Drop name</th>
+              <th class="th-table-quantity">Qty</th>
+              <th class="th-table-price">Price</th>
+              <th class="th-table-time">Time</th>
+              <th class="th-table-delete"></th>
+          </tr>   
+        </thead>
+      </table>
+      {{#if drops}}
+      <table id="rsdl-data-table">
+        <tbody id="rsdl-data">
+          {{#each drops}}
+            <tr>
+              <td class="td-table-number">{{number}}</td>
+              <td class="td-table-image"><img src="{{img}}"></td>
+              <td class="td-table-title">{{title}}</td>
+              <td class="td-table-quantity">{{quantity}}</td>
+              <td class="td-table-price">{{totalPrice}}</td>
+              <td class="td-table-time">{{createdAt}}</td>
+              <td class="td-table-delete"><button class="btn btn-danger delete">&times;</button></td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{else}}
+        <p>New droplog created.</p>
+        <p>Add new drops from right menu.</p>
+      {{/if}}
+      <footer>
+      &copy; 2015 <a href="http://www.michaltakac.com" target="_blank">Michal Takac</a>.
+      <br />
+      Special thanks to <strong>Mokuin</strong>, <strong>Alex</strong>, <strong>Richard</strong>, <strong>Aimer</strong> and <strong>Versusik</strong>!<br />
+      <a href="http://www.runescape.com" target="_blank">RuneScape</a> &reg; is a trademark of Jagex Ltd &copy; 1999 - 2015.
+      </footer>
+    </div>
+    
+  </div>
+
+  <aside>
+    <div class="add-drop">
+      <h3>Add drop</h3>
+      <ul>
+      {{#each dropImages}}    
+        <li class="drops-wrapper">
+          <div class="drop-image add-drop-to-db" title="{{title}}" id="{{boss}}">
+            <img src="{{img}}" title="{{title}}">
+          </div>
+          <span class="drop-count">{{itemCount}}</span>
+        </li>
+      {{/each}}
+      </ul>
+    </div>
+  </aside>
+</template>
