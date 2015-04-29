@@ -54,68 +54,18 @@ Template.todoList.events({
   }
 });
 
+
 /*
 * Helpers
 */
 
 Template.todoList.helpers({
   dropImages: function() {
-
-    switch(TodoLists.findOne({}).bossList) {
-        // RS3
-        case "BandosDropsRs3":
-            return BandosDropsRs3;
-            break;
-        case "ZamorakDropsRs3":
-            return ZamorakDropsRs3;
-            break;
-        case "SaradominDropsRs3":
-            return SaradominDropsRs3;
-            break;
-        case "ArmadylDropsRs3":
-            return ArmadylDropsRs3;
-            break;
-        case "ZamorakDropsRs3":
-            return ZamorakDropsRs3;
-            break;
-        case "AraxxorDrops":
-            return AraxxorDrops;
-            break;
-        case "NexDrops":
-            return NexDrops;
-            break;
-        case "QbdDrops":
-            return QbdDrops;
-            break;
-        case "RotsDrops":
-            return RotsDrops;
-            break;
-        case "CorpDropsRs3":
-            return CorpDropsRs3;
-            break;
-        case "TormentedDemonDropsRS3":
-            return TormentedDemonDropsRS3;
-            break;
-        case "KalphiteKingDrops":
-            return KalphiteKingDrops;
-            break;
-        case "KbdDropsRs3":
-            return KbdDropsRs3;
-            break;
-        case "KalphiteQueenDropsRs3":
-            return KalphiteQueenDropsRs3;
-            break;
-        case "VoragoDrops":
-            return VoragoDrops;
-            break;
-        // OSRS
-        case "ZulrahDrops":
-            return ZulrahDrops;
-            break;
-        // If not met, break
-        default:
-            Router.go('/lists');
-            break;
+    var getList = getDroplist(TodoLists.findOne({}).bossList);
+    if (getList) {
+      return getList
+    } else {
+      Router.go('/lists')
     }
   },
   currentTime: function() { 
