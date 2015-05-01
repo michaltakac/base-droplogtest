@@ -52,7 +52,7 @@ Base comes with a collection of pre-defined routes and templates for common func
 ```
 - / (Authenticated)
 - /login (Public)
-- /recover-password (Public) - not included int this app
+- /recover-password (Public) - not included in this app
 - /reset-password (Public) - not included in this app
 - /signup (Public)
 ```
