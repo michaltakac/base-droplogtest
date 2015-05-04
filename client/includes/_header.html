@@ -13,6 +13,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    	{{#if currentUser}}
 		      <ul class="nav navbar-nav">
+		      	<li class="{{currentRoute 'hiscores'}}"><a href="{{pathFor 'fetchStats'}}">Hiscores</a></li>
 		        <li class="{{currentRoute 'lists'}}"><a href="{{pathFor 'todoLists'}}">Droplogs</a></li>
 		        <li class="paypal-donate">
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">

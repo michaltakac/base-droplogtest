@@ -28,6 +28,18 @@ NexDrops = [
 		"npc": "Nex"
 	},
 	{
+		"title": "Torva platelegs",
+		"quantity": 1,
+		"price": 20381655,
+		"rarity": "Rare",
+		"droprate": 277,
+		"type": "Armour",
+		"img": "/img/rs3/torva_platelegs.png",
+		"game": "rs3",
+		"boss": "Nex",
+		"npc": "Nex"
+	},
+	{
 		"title": "Torva boots",
 		"quantity": 1,
 		"price": 17672465,

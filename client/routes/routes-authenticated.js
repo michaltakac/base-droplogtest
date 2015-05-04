@@ -3,6 +3,15 @@
 * Routes that are only visible to authenticated users.
 */
 
+Router.route('fetchStats', {
+  path: '/hiscores',
+  template: 'fetchStats',
+  onBeforeAction: function(){
+    Session.set('currentRoute', 'hiscores');
+    this.next();
+  }
+});
+
 Router.route('todoLists', {
   path: '/lists',
   template: 'todoLists',
