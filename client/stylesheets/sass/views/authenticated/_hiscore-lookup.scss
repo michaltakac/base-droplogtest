@@ -1,0 +1,164 @@
+/* Form */
+.hs-form {
+  background: #F3F4FD;
+  width: 339px;
+  padding: 10px;
+  border: 1px solid #c7c7c7;
+  margin-bottom: -1px;
+}
+.saveUsername {
+  margin: 0 120px;
+}
+#getUsername label {
+  font-weight: normal;
+  width: 120px;
+  text-align: right;
+}
+#getUsername select {
+  margin-left: 2px;
+}
+
+/* Table */
+#rs-hiscores {
+  border: 1px solid #c7c7c7;
+  font-size: 13px;
+}
+
+#rs-hiscores th {
+	padding: 7px;
+	border: 1px solid #c7c7c7;
+	text-align: center;
+}
+
+#rs-hiscores td {
+	border: 1px solid #c7c7c7;
+	padding: 2px 4px;
+}
+#rs-hiscores td:nth-child(2),
+#rs-hiscores td:nth-child(3),
+#rs-hiscores td:nth-child(4) {
+	text-align: right;
+}
+
+#rs-hiscore-data tr:nth-child(odd) {
+    background: #fff;
+}
+#rs-hiscore-data tr:nth-child(even) {
+    background: rgba(233, 234, 252, 0.48);
+}
+
+.rshs-table-header {
+	background: rgba(232, 181, 18, 0.42);
+}
+
+.rshs-table-skill-name {
+	width: 120px;
+}
+.rshs-table-rank {
+	width: 70px;
+}
+.rshs-table-level {
+	width: 30px;
+}
+.rshs-table-xp {
+	width: 100px;
+}
+
+/* Footer */
+footer {
+  font-size: 10px;
+  margin: 5px auto;
+  text-align: center;
+}
+
+/* Icons */
+.iconHiscores {
+	background-size: contain !important;
+	float: left;
+	height: 12px;
+	margin: 3px 3px 3px 0;
+	width: 12px;
+}
+.iconOverall {
+  	background: url('/img/icons/overall.gif') no-repeat;
+}
+.iconAttack {
+  	background: url('/img/icons/Attack-icon.png') no-repeat;
+}
+.iconDefence {
+  	background: url('/img/icons/Defence-icon.png') no-repeat;
+}
+.iconStrength {
+  	background: url('/img/icons/Strength-icon.png') no-repeat;
+}
+.iconConstitution,
+.iconHitpoints {
+    background: url('/img/icons/Constitution-icon.png') no-repeat;
+}
+.iconRanged {
+  	background: url('/img/icons/Ranged-icon.png') no-repeat;
+}
+.iconPrayer {
+  	background: url('/img/icons/Prayer-icon.png') no-repeat;
+}
+.iconMagic {
+  	background: url('/img/icons/Magic-icon.png') no-repeat;
+}
+.iconCooking {
+  	background: url('/img/icons/Cooking-icon.png') no-repeat;
+}
+.iconWoodcutting {
+  	background: url('/img/icons/Woodcutting-icon.png') no-repeat;
+}
+.iconFletching {
+  	background: url('/img/icons/Fletching-icon.png') no-repeat;
+}
+.iconFishing {
+  	background: url('/img/icons/Fishing-icon.png') no-repeat;
+}
+.iconFiremaking {
+  	background: url('/img/icons/Firemaking-icon.png') no-repeat;
+}
+.iconCrafting {
+  	background: url('/img/icons/Crafting-icon.png') no-repeat;
+}
+.iconSmithing {
+  	background: url('/img/icons/Smithing-icon.png') no-repeat;
+}
+.iconMining {
+  	background: url('/img/icons/Mining-icon.png') no-repeat;
+}
+.iconHerblore {
+  	background: url('/img/icons/Herblore-icon.png') no-repeat;
+}
+.iconAgility {
+  	background: url('/img/icons/Agility-icon.png') no-repeat;
+}
+.iconThieving {
+  	background: url('/img/icons/Thieving-icon.png') no-repeat;
+}
+.iconSlayer {
+  	background: url('/img/icons/Slayer-icon.png') no-repeat;
+}
+.iconFarming {
+  	background: url('/img/icons/Farming-icon.png') no-repeat;
+}
+.iconRunecraft,
+.iconRunecrafting {
+  	background: url('/img/icons/Runecrafting-icon.png') no-repeat;
+}
+.iconHunter {
+  	background: url('/img/icons/Hunter-icon.png') no-repeat;
+}
+.iconConstruction {
+  	background: url('/img/icons/Construction-icon.png') no-repeat;
+}
+.iconSummoning {
+  	background: url('/img/icons/Summoning-icon.png') no-repeat;
+}
+.iconDungeoneering {
+  	background: url('/img/icons/Dungeoneering-icon.png') no-repeat;
+}
+.iconDivination {
+  	background: url('/img/icons/Divination-icon.png') no-repeat;
+}

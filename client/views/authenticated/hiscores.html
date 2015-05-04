@@ -1,0 +1,24 @@
+<template name="hiscores">
+	{{#if getData}}
+	<table id="rs-hiscores">
+		<thead class="rshs-table-header">
+			<tr>
+				<th class="rshs-table-skill-name">Skill name</th>
+			    <th class="rshs-table-rank">Rank</th>
+			    <th class="rshs-table-level">Level</th>
+			    <th class="rshs-table-xp">Xp</th>
+			</tr>
+		</thead>
+		<tbody id="rs-hiscore-data">
+		  {{#each getData}}
+		    <tr>
+		      <td><div class="iconHiscores icon{{name}}"></div> {{name}}</td>
+		      <td>{{rank}}</td>
+		      <td>{{level}}</td>
+		      <td>{{xp}}</td>
+		    </tr>
+		   {{/each}}
+		</tbody>
+	</table>
+	{{/if}}
+</template>
